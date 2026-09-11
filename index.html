@@ -3,192 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistência Técnica de Informática | Henrique Informática</title>
-    <meta name="description" content="Assistência técnica especializada em computadores, notebooks e suporte de TI em São José do Rio Preto e região. Orçamento rápido pelo WhatsApp!">
+    <title>Henrique Informatica</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: Arial, sans-serif;
         }
         body {
-            background-color: #0b131a;
+            background-color: #0b1c28;
             color: #ffffff;
-            line-height: 1.6;
             text-align: center;
         }
-        header {
-            background: linear-gradient(135deg, #111b21 0%, #0b131a 100%);
-            padding: 60px 20px 50px 20px;
-            border-bottom: 1px solid #222d34;
+        
+        /* Seções e Blocos */
+        section {
+            padding: 60px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        header h1 {
-            font-size: 2.5rem;
-            color: #00ff88;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        header p {
-            font-size: 1.15rem;
-            color: #8696a0;
-            max-width: 650px;
-            margin: 0 auto 30px auto;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
+
+        /* Topo / Hero */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 50px 20px;
         }
+        .hero h1 {
+            font-size: 3rem;
+            color: #00d9ff;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         
-        /* Botão em formato de pílula com largura fixa e elegante */
-        .btn-whatsapp {
+        /* Estilo Exato do Botão do WhatsApp (Verde largo com ícone) */
+        .btn-wpp {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background-color: #25d366;
-            color: #0b131a;
-            padding: 15px 30px;
-            font-size: 1.05rem;
-            font-weight: 700;
+            background-color: #00cc00;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 50px;
-            width: 340px; /* Largura fixa para nunca esticar demais no PC */
-            max-width: 100%; /* Responsivo para celulares menores */
-            margin: 0 auto;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 204, 0, 0.4);
+            transition: background 0.3s;
         }
-        .btn-whatsapp:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        .btn-wpp:hover {
+            background-color: #00b300;
         }
-        .btn-whatsapp i {
-            font-size: 1.4rem;
+        .btn-wpp img {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
         }
 
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 35px;
-            color: #ffffff;
-            font-weight: 600;
+        /* Títulos das Seções */
+        h2 {
+            font-size: 2.5rem;
+            color: #00d9ff;
+            margin-bottom: 40px;
+            font-weight: bold;
         }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 45px;
-            text-align: left;
+
+        /* Grid de Diferenciais / Serviços */
+        .grid-3 {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        .service-card {
-            background-color: #111b21;
-            padding: 35px 25px;
-            border-radius: 16px;
-            border: 1px solid #222d34;
-            transition: border-color 0.3s ease;
+        .card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 320px;
+            padding: 20px;
         }
-        .service-card:hover {
-            border-color: #00ff88;
-        }
-        .service-card h3 {
-            color: #00ff88;
+        .card h3 {
             font-size: 1.3rem;
-            margin-bottom: 12px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
-        .service-card p {
-            color: #8696a0;
-            font-size: 0.98rem;
+        .card p {
+            font-size: 0.95rem;
+            color: #cccccc;
             line-height: 1.5;
         }
-        
-        .cta-box {
-            margin-top: 30px;
+
+        /* Imagens ilustrativas */
+        .content-img {
+            max-width: 450px;
+            width: 100%;
+            margin: 20px 0;
         }
 
-        /* Botão Flutuante do WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
-            color: #0b131a;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            z-index: 999;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #080c10;
-            color: #8696a0;
-            font-size: 0.9rem;
-            border-top: 1px solid #1f2c34;
-        }
-        footer p + p {
-            margin-top: 5px;
-            color: #667781;
+        .missao-texto {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #cccccc;
+            line-height: 1.6;
         }
     </style>
-    <!-- Ícones FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>Henrique Informática</h1>
-        <p>Assistência Técnica Especializada em Computadores, Notebooks e Suporte de TI em São José do Rio Preto e Região.</p>
-        <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+    <!-- TOPO / HEADER -->
+    <section class="hero">
+        <h1>HENRIQUE INFORMATICA</h1>
+        <!-- Botão WhatsApp -->
+        <a href="https://wa.me/5517999999999?text=Olá!" class="btn-wpp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> CHAMA NO WHATSAPP
         </a>
-    </header>
+    </section>
 
-    <div class="container">
-        <h2 class="section-title">O Que Nós Consertamos e Resolvemos</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Notebooks</h3>
-                <p>Reparo avançado de placa-mãe, troca de telas, teclados, limpeza interna profissional e otimização de velocidade com SSD.</p>
+    <!-- NOSSOS DIFERENCIAIS #1 -->
+    <section>
+        <h2>Nossos Diferenciais #1</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Diagnosticos Rapidos e Precisos</h3>
+                <p>Com equipamentos avançados e profissionais experientes, podemos identificar problemas de forma eficiente.</p>
             </div>
-            <div class="service-card">
-                <h3>Computadores (PCs)</h3>
-                <p>Formatação limpa, remoção de vírus, troca de peças, upgrades de hardware e substituição de fontes queimadas.</p>
+            <div class="card">
+                <h3>Equipes Especializadas em Diversas Marcas</h3>
+                <p>Contamos com equipes de técnicos especializados em uma ampla gama de marcas de equipamentos.</p>
             </div>
-            <div class="service-card">
-                <h3>Suporte de TI & Redes</h3>
-                <p>Configuração de redes corporativas, roteadores, Wi-Fi de alta performance e atendimento ágil para empresas.</p>
+            <div class="card">
+                <h3>Serviço Rapido e Confiavel</h3>
+                <p>Serviço ágil e de qualidade, atendendo às necessidades dos clientes de maneira oportuna.</p>
             </div>
         </div>
+        
+        <!-- Botão WhatsApp Repetido igual ao print -->
+        <a href="https://wa.me/5517999999999?text=Olá!" class="btn-wpp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> CHAMA NO WHATSAPP
+        </a>
+    </section>
 
-        <div class="cta-box">
-            <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO
-            </a>
+    <!-- FAÇA SEU ORÇAMENTO -->
+    <section>
+        <h2>Faça seu Orçamento!!</h2>
+        <!-- Botão WhatsApp Repetido -->
+        <a href="https://wa.me/5517999999999?text=Olá!" class="btn-wpp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> CHAMA NO WHATSAPP
+        </a>
+    </section>
+
+    <!-- NOSSOS DIFERENCIAIS #2 -->
+    <section>
+        <h2>Nossos Diferenciais #2</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Garantia</h3>
+                <p>Estamos tão confiantes na qualidade do trabalho que oferecemos garantia em cada serviço prestado.</p>
+            </div>
+            <div class="card">
+                <h3>Reparo de Alta Qualidade</h3>
+                <p>Utilizamos peças de reposição de qualidade e técnicas avançadas para garantir que seus equipamentos com exxelência.</p>
+            </div>
+            <div class="card">
+                <h3>Satisfação do Cliente</h3>
+                <p>Nosso compromisso é garantir a satisfação de cada cliente, oferecendo um serviço personalizado e atencioso.</p>
+            </div>
         </div>
-    </div>
+        
+        <!-- Botão WhatsApp Repetido -->
+        <a href="https://wa.me/5517999999999?text=Olá!" class="btn-wpp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> CHAMA NO WHATSAPP
+        </a>
+    </section>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <footer>
-        <p>&copy; 2026 Henrique Informática. Todos os direitos reservados.</p>
-        <p>São José do Rio Preto - SP</p>
-    </footer>
+    <!-- NOSSA MISSÃO -->
+    <section>
+        <h2>Nossa Missão</h2>
+        <p class="missao-texto">
+            Na Henrique Informatica, estamos unidos pelo propósito de trabalhar com transparência, respeito, integridade, criatividade e empatia. Pensamos diariamente na missão que move nossos ideais de "manter pessoas e empresas conectadas". Entendemos que nos dias de hoje, não estar conectado é ao mesmo tempo, estar por fora do momento.
+        </p>
+    </section>
 
 </body>
 </html>

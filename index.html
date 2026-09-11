@@ -16,11 +16,11 @@
             background-color: #0b131a;
             color: #ffffff;
             line-height: 1.6;
+            text-align: center; /* Centraliza textos gerais por segurança */
         }
         header {
             background: linear-gradient(135deg, #111b21 0%, #0b131a 100%);
             padding: 60px 20px 50px 20px;
-            text-align: center;
             border-bottom: 1px solid #222d34;
         }
         header h1 {
@@ -28,7 +28,6 @@
             color: #00ff88;
             margin-bottom: 12px;
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
         header p {
             font-size: 1.15rem;
@@ -42,7 +41,7 @@
             padding: 50px 20px;
         }
         
-        /* Estilo dos Botões - Mais centralizados, elegantes e com largura controlada */
+        /* Botão Compacto e Centralizado */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -50,12 +49,14 @@
             gap: 12px;
             background-color: #25d366;
             color: #0b131a;
-            text-align: center;
             padding: 16px 35px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 50px; /* Formato pílula bem arredondado */
+            max-width: 420px; /* Trava a largura para não esticar demais */
+            width: 100%;
+            margin: 0 auto;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
             transition: all 0.3s ease;
         }
@@ -69,7 +70,6 @@
         }
 
         .section-title {
-            text-align: center;
             font-size: 2rem;
             margin-bottom: 35px;
             color: #ffffff;
@@ -80,13 +80,13 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 45px;
+            text-align: left; /* Mantém os cards alinhados à esquerda para facilitar leitura */
         }
         .service-card {
             background-color: #111b21;
             padding: 35px 25px;
             border-radius: 16px;
             border: 1px solid #222d34;
-            text-align: left;
             transition: border-color 0.3s ease;
         }
         .service-card:hover {
@@ -103,9 +103,8 @@
             line-height: 1.5;
         }
         
-        .cta-center {
-            text-align: center;
-            margin-top: 20px;
+        .cta-box {
+            margin-top: 30px;
         }
 
         /* Botão Flutuante do WhatsApp */
@@ -174,7 +173,7 @@
             </div>
         </div>
 
-        <div class="cta-center">
+        <div class="cta-box">
             <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO SEM COMPROMISSO
             </a>

@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Informática | Assistência Técnica Especializada</title>
-    <meta name="description" content="Assistência técnica especializada em computadores, notebooks e redes em São José do Rio Preto e região.">
-    <!-- FontAwesome para ícones -->
+    <title>Henrique Informática | Assistência Técnica Especializada em TI</title>
+    <meta name="description" content="Assistência técnica especializada em computadores, notebooks, servidores e redes. Diagnóstico rápido e suporte eficiente para sua empresa ou residência.">
+    <!-- Ícones e Fonte Moderna -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-deep: #0c2b40;
-            --bg-card: #112330;
+            --bg-base: #070d13;
+            --bg-card: #0c1b28;
+            --bg-card-hover: #112638;
             --primary: #0fb8ce;
             --primary-hover: #0da4b8;
+            --accent-green: #25d366;
+            --accent-green-hover: #20ba5a;
             --text-main: #ffffff;
-            --text-muted: #b0c4de;
+            --text-muted: #94a3b8;
+            --border-color: rgba(15, 184, 206, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
         html {
@@ -29,254 +35,395 @@
         }
 
         body {
-            background-color: var(--bg-deep);
+            background-color: var(--bg-base);
             color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        header {
-            background: linear-gradient(180deg, #092030 0%, #0c2b40 100%);
-            padding: 70px 20px 50px 20px;
+        /* Hero Section (Topo de Alto Impacto) */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(12, 43, 64, 0.95) 0%, rgba(7, 13, 19, 0.98) 100%), 
+                        url('https://henriqueinformativa.com/_assets/media/ecf77dc2116ef4e4b3cc22571a6d28a0.jpg') center/cover no-repeat;
+            padding: 100px 20px 80px 20px;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .logo-text {
-            font-size: clamp(2.2rem, 4vw, 3.2rem);
+        .hero-badge {
+            display: inline-block;
+            background: rgba(15, 184, 206, 0.1);
             color: var(--primary);
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.3rem, 5vw, 3.8rem);
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            color: var(--text-main);
         }
 
-        .hero-subtitle {
-            font-size: 1.15rem;
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            font-weight: 300;
         }
 
-        /* Botão do WhatsApp Elegante (Centralizado e Compacto) */
-        .btn-wpp {
+        /* Botão de Alta Conversão (CTA) */
+        .btn-whatsapp {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            background-color: #25d366;
+            background-color: var(--accent-green);
             color: #ffffff;
             text-decoration: none;
-            padding: 15px 35px;
-            font-size: 1.1rem;
+            padding: 18px 40px;
+            font-size: 1.15rem;
             font-weight: 700;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            margin: 20px auto;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+            transition: var(--transition);
         }
 
-        .btn-wpp:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        .btn-whatsapp:hover {
+            background-color: var(--accent-green-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
         }
 
-        .btn-wpp i {
-            font-size: 1.3rem;
+        .btn-whatsapp i {
+            font-size: 1.4rem;
         }
 
+        /* Container Principal */
         .container {
-            max-width: 1000px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 50px 20px;
-            text-align: center;
+            padding: 90px 20px;
         }
 
-        .section-title {
-            font-size: clamp(1.8rem, 3vw, 2.3rem);
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
             color: var(--primary);
-            margin-bottom: 40px;
             font-weight: 700;
-            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
         }
 
-        /* Grid de Cards */
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Grid de Cards Dinâmico */
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .card {
             background-color: var(--bg-card);
-            border: 1px solid rgba(15, 184, 206, 0.2);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: left;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0;
+            transition: var(--transition);
         }
 
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-8px);
+            background-color: var(--bg-card-hover);
             border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(15, 184, 206, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
         }
 
         .card h3 {
-            font-size: 1.25rem;
-            color: var(--text-main);
-            margin-bottom: 12px;
+            font-size: 1.35rem;
             font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-main);
         }
 
         .card p {
-            font-size: 0.95rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
 
-        /* Seção da Missão */
-        .mission-box {
-            background-color: var(--bg-card);
-            border: 1px solid rgba(15, 184, 206, 0.2);
-            padding: 45px 30px;
-            border-radius: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+        /* Seção de Orçamento / CTA Intermediária */
+        .cta-banner {
+            background: linear-gradient(135deg, #0c2b40 0%, #0c1b28 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 60px 40px;
             text-align: center;
+            margin: 60px 0;
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
-        .mission-box p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.8;
+        .cta-banner h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
+            color: var(--text-main);
         }
 
-        .mission-box strong {
+        .cta-banner h2 span {
+            color: var(--primary);
+        }
+
+        .cta-banner p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+        }
+
+        /* Seção Institucional / Missão */
+        .mission-wrapper {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mission-content h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .mission-content p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .mission-content strong {
             color: var(--primary);
         }
 
         /* Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--accent-green);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            font-size: 34px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             text-decoration: none;
-            transition: transform 0.3s ease;
+            transition: var(--transition);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(10deg);
+            background-color: var(--accent-green-hover);
         }
 
+        /* Rodapé */
         footer {
-            padding: 35px 20px;
-            background-color: #081d2c;
-            color: var(--text-muted);
+            background-color: #04080c;
+            padding: 40px 20px;
             text-align: center;
+            color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 60px;
+        }
+
+        /* Responsividade Avançada */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 70px 15px 50px 15px;
+            }
+            .container {
+                padding: 60px 15px;
+            }
+            .mission-wrapper {
+                padding: 30px 20px;
+            }
+            .cta-banner {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOPO / HEADER -->
-    <header>
-        <h1 class="logo-text">Henrique Informática</h1>
-        <p class="hero-subtitle">Assistência técnica especializada em computadores, notebooks e redes. Soluções eficientes para sua TI.</p>
-        <div>
-            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-            </a>
-        </div>
+    <!-- TOPO / HERO SECTION -->
+    <header class="hero">
+        <div class="hero-badge"><i class="fas fa-shield-alt"></i> Suporte Técnico Profissional</div>
+        <h1>Henrique <span>Informática</span></h1>
+        <p>Assistência técnica avançada em computadores, notebooks, servidores e redes. Soluções definitivas, rápidas e seguras para manter sua rotina conectada.</p>
+        <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> CHAMAR SUPORTE NO WHATSAPP
+        </a>
     </header>
 
-    <div class="container">
+    <main class="container">
         
-        <!-- NOSSOS DIFERENCIAIS #1 -->
-        <h2 class="section-title">Nossos Diferenciais #1</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Diagnósticos Rápidos e Precisos</h3>
-                <p>Com equipamentos avançados e profissionais experientes, podemos identificar problemas de forma eficiente.</p>
+        <!-- DIFERENCIAIS #1 -->
+        <section style="margin-bottom: 90px;">
+            <div class="section-header">
+                <h2>Nossos Diferenciais #1</h2>
+                <p>Tecnologia e agilidade unidas para resolver qualquer falha técnica</p>
             </div>
-            <div class="card">
-                <h3>Equipes Especializadas em Diversas Marcas</h3>
-                <p>Contamos com equipes de técnicos especializados em uma ampla gama de marcas de equipamentos.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Diagnósticos Rápidos e Precisos</h3>
+                    <p>Com equipamentos de ponta e profissionais experientes, identificamos a causa raiz do problema de forma cirúrgica e eficiente.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Especialistas em Diversas Marcas</h3>
+                    <p>Contamos com suporte completo certificado para atender a uma ampla gama de hardwares, notebooks e marcas corporativas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Serviço Ágil e Confiável</h3>
+                    <p>Comprometimento com prazos rigorosos, entregando qualidade máxima para que sua empresa ou uso pessoal não pare.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Serviço Rápido e Confiável</h3>
-                <p>Serviço ágil e de qualidade, atendendo às necessidades dos clientes de maneira oportuna.</p>
-            </div>
-        </div>
-        <div>
-            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-            </a>
-        </div>
 
-        <!-- FAÇA SEU ORÇAMENTO -->
-        <div style="margin: 60px 0;">
-            <h2 class="section-title" style="margin-bottom: 20px;">Faça seu Orçamento!!</h2>
-            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-            </a>
-        </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> QUERO RESOLVER MEU PROBLEMA
+                </a>
+            </div>
+        </section>
 
-        <!-- NOSSOS DIFERENCIAIS #2 -->
-        <h2 class="section-title">Nossos Diferenciais #2</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Garantia</h3>
-                <p>Estamos tão confiantes na qualidade do trabalho que oferecemos garantia em cada serviço prestado.</p>
-            </div>
-            <div class="card">
-                <h3>Reparo de Alta Qualidade</h3>
-                <p>Utilizamos peças de reposição de qualidade e técnicas avançadas para garantir que seus equipamentos funcionem com excelência.</p>
-            </div>
-            <div class="card">
-                <h3>Satisfação do Cliente</h3>
-                <p>Nosso compromisso é garantir a satisfação de cada cliente, oferecendo um serviço personalizado e atencioso.</p>
-            </div>
-        </div>
-        <div>
-            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+        <!-- BANNER DE CONVERSÃO / ORÇAMENTO -->
+        <section class="cta-banner">
+            <h2>Precisa de um <span>Orçamento Rápido?</span></h2>
+            <p>Fale diretamente com o técnico especialista pelo WhatsApp e tire suas dúvidas sem compromisso agora mesmo.</p>
+            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Or%C3%A7amento%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> FAÇA SEU ORÇAMENTO AGORA
             </a>
-        </div>
+        </section>
+
+        <!-- DIFERENCIAIS #2 -->
+        <section style="margin-bottom: 90px;">
+            <div class="section-header">
+                <h2>Nossos Diferenciais #2</h2>
+                <p>O padrão de excelência que garante total segurança ao seu investimento</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Garantia em Cada Serviço</h3>
+                    <p>Confiamos plenamente na qualidade técnica do nosso trabalho, oferecendo garantia formal em todos os reparos prestados.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Reparo de Alta Qualidade</h3>
+                    <p>Utilizamos apenas componentes de reposição de primeira linha e procedimentos avançados de bancada para máxima durabilidade.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Satisfação do Cliente</h3>
+                    <p>Nosso foco absoluto é a sua experiência: atendimento consultivo, humanizado e totalmente personalizado para a sua necessidade.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> FALAR COM UM ESPECIALISTA
+                </a>
+            </div>
+        </section>
 
         <!-- NOSSA MISSÃO -->
-        <div style="margin-top: 65px;">
-            <h2 class="section-title">Nossa Missão</h2>
-            <div class="mission-box">
-                <p>
-                    Na Henrique Informática, estamos unidos pelo propósito de trabalhar com transparência, respeito, integridade, criatividade e empatia. Pensamos diariamente na missão que move nossos ideais de <strong>"manter pessoas e empresas conectadas"</strong>. Entendemos que nos dias de hoje, não estar conectado é ao mesmo tempo, estar por fora do momento.
-                </p>
+        <section>
+            <div class="mission-wrapper">
+                <div class="mission-content">
+                    <h2>Nossa Missão</h2>
+                    <p>
+                        Na Henrique Informática, unimos o propósito de trabalhar com transparência, respeito, integridade, criatividade e empatia. Pensamos diariamente na missão que move nossos ideais de <strong>"manter pessoas e empresas conectadas"</strong>. Entendemos que nos dias de hoje, não estar conectado é, ao mesmo tempo, estar por fora do momento.
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </div>
+    </main>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="whatsapp-float" target="_blank" rel="noopener">
+    <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contato WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- RODAPÉ -->
     <footer>
         <p>&copy; 2026 Henrique Informática. Todos os direitos reservados. | São José do Rio Preto - SP</p>
     </footer>

@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assistência Técnica | Henrique Informática</title>
-    <meta name="description" content="Serviço confiável de assistência técnica para computadores, servidores e redes. Suporte rápido e soluções eficientes para sua TI.">
-    <link rel="shortcut icon" href="https://henriqueinformativa.com/_assets/images/5e6bd2b75f74734c79c916f71acdaf43.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique Informática | Assistência Técnica Especializada</title>
+    <meta name="description" content="Assistência técnica especializada em computadores, notebooks, servidores e redes em São José do Rio Preto e região.">
     <!-- FontAwesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-dark: #0c2b40;
-            --bg-card: rgba(17, 35, 48, 0.85);
+            --bg-deep: #070d13;
+            --bg-card: #0c1b28;
+            --card-hover: #112638;
             --primary: #0fb8ce;
             --primary-hover: #0da4b8;
             --text-main: #ffffff;
-            --text-muted: #b0c4de;
+            --text-muted: #94a3b8;
+            --border-color: rgba(15, 184, 206, 0.2);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         html {
@@ -30,47 +31,37 @@
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-deep);
             color: var(--text-main);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(180deg, rgba(12, 43, 64, 0.9) 0%, rgba(12, 43, 64, 1) 100%), 
-                        url('https://henriqueinformativa.com/_assets/media/ecf77dc2116ef4e4b3cc22571a6d28a0.jpg') center/cover fixed;
+        /* Hero / Topo */
+        header {
+            background: linear-gradient(135deg, #0c2b40 0%, #070d13 100%);
+            padding: 80px 20px 60px 20px;
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        h1 {
-            font-size: clamp(2.2rem, 4vw, 3.5rem);
+        .logo-text {
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
             color: var(--primary);
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 20px;
             letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--primary);
-            margin-bottom: 40px;
-            font-weight: 700;
-            text-align: center;
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 30px auto;
         }
 
-        /* Botão WhatsApp Profissional */
+        /* Botão do WhatsApp Estilizado (Pílula) */
         .btn-wpp {
             display: inline-flex;
             align-items: center;
@@ -80,12 +71,12 @@
             color: #ffffff;
             text-decoration: none;
             padding: 16px 36px;
-            font-size: 1.15rem;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 700;
             border-radius: 50px;
-            margin: 25px 0;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
+            margin: 15px 0;
         }
 
         .btn-wpp:hover {
@@ -95,83 +86,103 @@
         }
 
         .btn-wpp i {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
-        /* Grid de Serviços / Diferenciais */
+        /* Container Principal */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--primary);
+            margin-bottom: 45px;
+            font-weight: 700;
+        }
+
+        /* Grid de Cards (Diferenciais / Serviços) */
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             gap: 30px;
-            max-width: 1100px;
-            width: 100%;
-            margin: 0 auto 30px auto;
+            margin-bottom: 50px;
         }
 
         .card {
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(15, 184, 206, 0.2);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 35px 25px;
             text-align: left;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .card:hover {
             transform: translateY(-5px);
+            background-color: var(--card-hover);
             border-color: var(--primary);
         }
 
         .card h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: var(--text-main);
-            margin-bottom: 15px;
-            font-weight: bold;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .card p {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
 
-        /* Seção Missão */
-        .mission-box {
-            max-width: 800px;
-            background: var(--bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(15, 184, 206, 0.2);
-            padding: 40px;
-            border-radius: 20px;
+        /* Seção Centralizada (Orçamento e Missão) */
+        .text-center-box {
             text-align: center;
+            margin: 40px 0;
         }
 
-        .mission-box p {
+        .mission-section {
+            background-color: #0c1b28;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 50px 30px;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .mission-section p {
             font-size: 1.1rem;
             color: var(--text-muted);
             line-height: 1.8;
         }
 
-        .mission-box strong {
+        .mission-section strong {
             color: var(--primary);
         }
 
-        /* Botão Flutuante do WhatsApp para Celular */
+        /* Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background-color: #25d366;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            font-size: 32px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
             z-index: 1000;
             text-decoration: none;
             transition: transform 0.3s ease;
@@ -181,11 +192,12 @@
             transform: scale(1.1);
         }
 
+        /* Rodapé */
         footer {
-            padding: 30px;
-            background-color: #081d2c;
-            color: var(--text-muted);
             text-align: center;
+            padding: 40px 20px;
+            background-color: #05090e;
+            color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -193,21 +205,19 @@
 </head>
 <body>
 
-    <!-- TOPO / HERO -->
-    <section class="hero">
-        <img src="https://henriqueinformativa.com/_assets/media/bbace7bb7eacc7428c957024d2e72988.png" alt="Henrique Informática" style="max-width: 320px; margin-bottom: 25px;">
-        <h1 style="display:none;">HENRIQUE INFORMATICA</h1>
-        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 20px;">
-            Assistência técnica especializada em computadores, servidores e redes. Soluções eficientes para sua TI.
-        </p>
+    <!-- TOPO / HEADER -->
+    <header>
+        <h1 class="logo-text">Henrique Informática</h1>
+        <p class="hero-subtitle">Assistência técnica especializada em computadores, notebooks e servidores. Atendimento rápido e soluções eficientes para sua TI.</p>
         <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
         </a>
-    </section>
+    </header>
 
-    <!-- NOSSOS DIFERENCIAIS #1 -->
-    <section>
-        <h2>Nossos Diferenciais #1</h2>
+    <div class="container">
+        
+        <!-- NOSSOS DIFERENCIAIS #1 -->
+        <h2 class="section-title">Nossos Diferenciais #1</h2>
         <div class="grid-3">
             <div class="card">
                 <h3>Diagnósticos Rápidos e Precisos</h3>
@@ -222,22 +232,23 @@
                 <p>Serviço ágil e de qualidade, atendendo às necessidades dos clientes de maneira oportuna.</p>
             </div>
         </div>
-        <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-        </a>
-    </section>
 
-    <!-- FAÇA SEU ORÇAMENTO -->
-    <section style="background: linear-gradient(180deg, rgba(12, 43, 64, 1) 0%, rgba(10, 35, 52, 1) 100%);">
-        <h2>Faça seu Orçamento!!</h2>
-        <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-        </a>
-    </section>
+        <div class="text-center-box">
+            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+            </a>
+        </div>
 
-    <!-- NOSSOS DIFERENCIAIS #2 -->
-    <section>
-        <h2>Nossos Diferenciais #2</h2>
+        <!-- FAÇA SEU ORÇAMENTO -->
+        <div style="margin: 80px 0 50px 0; text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 25px;">Faça seu Orçamento!!</h2>
+            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+            </a>
+        </div>
+
+        <!-- NOSSOS DIFERENCIAIS #2 -->
+        <h2 class="section-title">Nossos Diferenciais #2</h2>
         <div class="grid-3">
             <div class="card">
                 <h3>Garantia</h3>
@@ -252,26 +263,29 @@
                 <p>Nosso compromisso é garantir a satisfação de cada cliente, oferecendo um serviço personalizado e atencioso.</p>
             </div>
         </div>
-        <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-        </a>
-    </section>
 
-    <!-- NOSSA MISSÃO -->
-    <section class="hero" style="background-image: url('https://henriqueinformativa.com/_assets/media/ea57bcc8e8369ae57b902c516f6e956f.jpg');">
-        <h2>Nossa Missão</h2>
-        <div class="mission-box">
+        <div class="text-center-box" style="margin-bottom: 80px;">
+            <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-wpp" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+            </a>
+        </div>
+
+        <!-- NOSSA MISSÃO -->
+        <h2 class="section-title">Nossa Missão</h2>
+        <div class="mission-section">
             <p>
-                Na Henrique Informatica, estamos unidos pelo propósito de trabalhar com transparência, respeito, integridade, criatividade e empatia. Pensamos diariamente na missão que move nossos ideais de <strong>"manter pessoas e empresas conectadas"</strong>. Entendemos que nos dias de hoje, não estar conectado é ao mesmo tempo, estar por fora do momento.
+                Na Henrique Informática, estamos unidos pelo propósito de trabalhar com transparência, respeito, integridade, criatividade e empatia. Pensamos diariamente na missão que move nossos ideais de <strong>"manter pessoas e empresas conectadas"</strong>. Entendemos que nos dias de hoje, não estar conectado é ao mesmo tempo, estar por fora do momento.
             </p>
         </div>
-    </section>
+
+    </div>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- RODAPÉ -->
     <footer>
         <p>&copy; 2026 Henrique Informática. Todos os direitos reservados. | São José do Rio Preto - SP</p>
     </footer>

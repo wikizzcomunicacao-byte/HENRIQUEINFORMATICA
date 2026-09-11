@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Informática | Assistência Técnica Especializada em TI</title>
-    <meta name="description" content="Assistência técnica especializada em computadores, notebooks, servidores e redes. Diagnóstico rápido e suporte eficiente para sua empresa ou residência.">
+    <title>Henrique Informática | Assistência Técnica em São José do Rio Preto</title>
+    <meta name="description" content="Assistência técnica especializada em computadores, notebooks, servidores e redes em São José do Rio Preto e região. Suporte rápido e seguro.">
     <!-- Ícones e Fonte Moderna -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -41,12 +41,27 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section (Topo de Alto Impacto) */
+        /* Barra de Aviso Local (Garantia para o Google Ads) */
+        .local-bar {
+            background-color: #0c2b40;
+            color: var(--primary);
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .local-bar i {
+            margin-right: 8px;
+        }
+
+        /* Hero Section */
         .hero {
             position: relative;
             background: linear-gradient(135deg, rgba(12, 43, 64, 0.95) 0%, rgba(7, 13, 19, 0.98) 100%), 
                         url('https://henriqueinformativa.com/_assets/media/ecf77dc2116ef4e4b3cc22571a6d28a0.jpg') center/cover no-repeat;
-            padding: 100px 20px 80px 20px;
+            padding: 80px 20px 70px 20px;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
@@ -155,27 +170,11 @@
             overflow: hidden;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
         .card:hover {
             transform: translateY(-8px);
             background-color: var(--bg-card-hover);
             border-color: var(--primary);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .card:hover::before {
-            opacity: 1;
         }
 
         .card-icon {
@@ -204,7 +203,43 @@
             line-height: 1.7;
         }
 
-        /* Seção de Orçamento / CTA Intermediária */
+        /* Seção de Transparência e Localização (Essencial Google Ads) */
+        .location-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .location-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .location-info h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .location-info p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .location-info p i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        /* Banner de Orçamento */
         .cta-banner {
             background: linear-gradient(135deg, #0c2b40 0%, #0c1b28 100%);
             border: 1px solid var(--border-color);
@@ -238,10 +273,6 @@
             border: 1px solid var(--border-color);
             border-radius: 24px;
             padding: 60px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            align-items: center;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -290,40 +321,33 @@
             background-color: var(--accent-green-hover);
         }
 
-        /* Rodapé */
+        /* Rodapé com Transparência de CNPJ/Endereço (Exigência do Google) */
         footer {
             background-color: #04080c;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Responsividade Avançada */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 70px 15px 50px 15px;
-            }
-            .container {
-                padding: 60px 15px;
-            }
-            .mission-wrapper {
-                padding: 30px 20px;
-            }
-            .cta-banner {
-                padding: 40px 20px;
-            }
+        footer p {
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
 
+    <!-- BARRA LOCAL PARA TRANSPARÊNCIA NO GOOGLE ADS -->
+    <div class="local-bar">
+        <i class="fas fa-map-marker-alt"></i> Atendimento Especializado em São José do Rio Preto - SP e Região
+    </div>
+
     <!-- TOPO / HERO SECTION -->
     <header class="hero">
-        <div class="hero-badge"><i class="fas fa-shield-alt"></i> Suporte Técnico Profissional</div>
+        <div class="hero-badge"><i class="fas fa-shield-alt"></i> Assistência Técnica Autorizada e Local</div>
         <h1>Henrique <span>Informática</span></h1>
-        <p>Assistência técnica avançada em computadores, notebooks, servidores e redes. Soluções definitivas, rápidas e seguras para manter sua rotina conectada.</p>
+        <p>Soluções avançadas em computadores, notebooks, servidores e redes em São José do Rio Preto. Atendimento rápido, transparente e seguro.</p>
         <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i> CHAMAR SUPORTE NO WHATSAPP
         </a>
@@ -363,6 +387,21 @@
             </div>
         </section>
 
+        <!-- SEÇÃO DE LOCALIZAÇÃO (EXIGÊNCIA ANTI-SUSPENSÃO DO GOOGLE ADS) -->
+        <section class="location-section">
+            <div class="location-info">
+                <h3><i class="fas fa-store"></i> Atendimento Local em Rio Preto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Base Operacional:</strong> São José do Rio Preto - SP</p>
+                <p><i class="fas fa-phone-alt"></i> <strong>Contato Direto:</strong> (17) 98805-5332</p>
+                <p><i class="fas fa-clock"></i> <strong>Horário:</strong> Segunda a Sexta em horário comercial</p>
+            </div>
+            <div>
+                <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20saber%20sobre%20o%20atendimento%20em%20Rio%20Preto." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> TIRAR DÚVIDAS NO WHATSAPP
+                </a>
+            </div>
+        </section>
+
         <!-- BANNER DE CONVERSÃO / ORÇAMENTO -->
         <section class="cta-banner">
             <h2>Precisa de um <span>Orçamento Rápido?</span></h2>
@@ -396,12 +435,6 @@
                     <p>Nosso foco absoluto é a sua experiência: atendimento consultivo, humanizado e totalmente personalizado para a sua necessidade.</p>
                 </div>
             </div>
-
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="https://wa.me/5517988055332?text=Oi%2C%20tudo%20bem!%20Gostaria%20de%20um%20Suporte%20t%C3%A9cnico%2C%20como%20funciona%3F" class="btn-whatsapp" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> FALAR COM UM ESPECIALISTA
-                </a>
-            </div>
         </section>
 
         <!-- NOSSA MISSÃO -->
@@ -423,9 +456,11 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ COM DADOS DE TRANSPARÊNCIA -->
     <footer>
-        <p>&copy; 2026 Henrique Informática. Todos os direitos reservados. | São José do Rio Preto - SP</p>
+        <p><strong>Henrique Informática - Assistência Técnica Especializada</strong></p>
+        <p>São José do Rio Preto - SP | WhatsApp: (17) 98805-5332</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #64748b;">&copy; 2026 Henrique Informática. Todos os direitos reservados.</p>
     </footer>
 
 </body>

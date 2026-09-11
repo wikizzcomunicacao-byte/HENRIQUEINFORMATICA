@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
         body {
             background-color: #0b131a;
@@ -18,103 +18,133 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #0f1c24 0%, #0b131a 100%);
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #111b21 0%, #0b131a 100%);
+            padding: 60px 20px 50px 20px;
             text-align: center;
-            border-bottom: 2px solid #1f2c34;
+            border-bottom: 1px solid #222d34;
         }
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: #00ff88;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         header p {
-            font-size: 1.1rem;
-            color: #d1d7db;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #8696a0;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 50px 20px;
         }
-        .hero-btn {
-            display: block;
+        
+        /* Estilo dos Botões - Mais centralizados, elegantes e com largura controlada */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             background-color: #25d366;
-            color: white;
+            color: #0b131a;
             text-align: center;
-            padding: 16px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 16px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 50px;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: background 0.3s;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
         }
-        .hero-btn:hover {
+        .btn-whatsapp:hover {
             background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
         }
+        .btn-whatsapp i {
+            font-size: 1.4rem;
+        }
+
         .section-title {
             text-align: center;
-            font-size: 1.8rem;
-            margin: 40px 0 20px;
+            font-size: 2rem;
+            margin-bottom: 35px;
             color: #ffffff;
+            font-weight: 600;
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 45px;
         }
         .service-card {
             background-color: #111b21;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 35px 25px;
+            border-radius: 16px;
             border: 1px solid #222d34;
-            text-align: center;
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: #00ff88;
         }
         .service-card h3 {
             color: #00ff88;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
         }
         .service-card p {
             color: #8696a0;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
+            line-height: 1.5;
         }
+        
+        .cta-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         /* Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background-color: #25d366;
-            color: white;
-            width: 65px;
-            height: 65px;
+            color: #0b131a;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
             z-index: 999;
             text-decoration: none;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
+        
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
             background-color: #080c10;
             color: #8696a0;
             font-size: 0.9rem;
             border-top: 1px solid #1f2c34;
         }
+        footer p + p {
+            margin-top: 5px;
+            color: #667781;
+        }
     </style>
-    <!-- Ícones para o WhatsApp flutuante -->
+    <!-- Ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -122,7 +152,7 @@
     <header>
         <h1>Henrique Informática</h1>
         <p>Assistência Técnica Especializada em Computadores, Notebooks e Suporte de TI em São José do Rio Preto e Região.</p>
-        <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="hero-btn" target="_blank">
+        <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP AGORA
         </a>
     </header>
@@ -132,24 +162,26 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Notebooks</h3>
-                <p>Reparo de placa mãe, troca de telas, teclados, limpeza interna e otimização de velocidade.</p>
+                <p>Reparo avançado de placa-mãe, troca de telas, teclados, limpeza interna profissional e otimização de velocidade com SSD.</p>
             </div>
             <div class="service-card">
                 <h3>Computadores (PCs)</h3>
-                <p>Formatação, remoção de vírus, troca de peças, upgrades de SSD e fontes queimadas.</p>
+                <p>Formatação limpa, remoção de vírus, troca de peças, upgrades de hardware e substituição de fontes queimadas.</p>
             </div>
             <div class="service-card">
                 <h3>Suporte de TI & Redes</h3>
-                <p>Configuração de redes corporativas, roteadores, Wi-Fi e atendimento rápido para empresas.</p>
+                <p>Configuração de redes corporativas, roteadores, Wi-Fi de alta performance e atendimento ágil para empresas.</p>
             </div>
         </div>
 
-        <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="hero-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO SEM COMPROMISSO
-        </a>
+        <div class="cta-center">
+            <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO SEM COMPROMISSO
+            </a>
+        </div>
     </div>
 
-    <!-- Botão Flutuante do WhatsApp (Sempre grudado na tela do celular) -->
+    <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>

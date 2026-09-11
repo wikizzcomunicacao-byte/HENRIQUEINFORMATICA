@@ -16,7 +16,7 @@
             background-color: #0b131a;
             color: #ffffff;
             line-height: 1.6;
-            text-align: center; /* Centraliza textos gerais por segurança */
+            text-align: center;
         }
         header {
             background: linear-gradient(135deg, #111b21 0%, #0b131a 100%);
@@ -41,7 +41,7 @@
             padding: 50px 20px;
         }
         
-        /* Botão Compacto e Centralizado */
+        /* Botão em formato de pílula com largura fixa e elegante */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -49,13 +49,13 @@
             gap: 12px;
             background-color: #25d366;
             color: #0b131a;
-            padding: 16px 35px;
+            padding: 15px 30px;
             font-size: 1.05rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 50px; /* Formato pílula bem arredondado */
-            max-width: 420px; /* Trava a largura para não esticar demais */
-            width: 100%;
+            border-radius: 50px;
+            width: 340px; /* Largura fixa para nunca esticar demais no PC */
+            max-width: 100%; /* Responsivo para celulares menores */
             margin: 0 auto;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
             transition: all 0.3s ease;
@@ -80,7 +80,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 45px;
-            text-align: left; /* Mantém os cards alinhados à esquerda para facilitar leitura */
+            text-align: left;
         }
         .service-card {
             background-color: #111b21;
@@ -152,7 +152,7 @@
         <h1>Henrique Informática</h1>
         <p>Assistência Técnica Especializada em Computadores, Notebooks e Suporte de TI em São José do Rio Preto e Região.</p>
         <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP AGORA
+            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
         </a>
     </header>
 
@@ -175,7 +175,7 @@
 
         <div class="cta-box">
             <a href="https://wa.me/5517999999999?text=Olá!%20Vi%20o%20anúncio%20no%20Google%20e%20preciso%20de%20suporte%20técnico." class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO SEM COMPROMISSO
+                <i class="fab fa-whatsapp"></i> FAZER ORÇAMENTO
             </a>
         </div>
     </div>
